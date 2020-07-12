@@ -8,13 +8,21 @@ Keep all the files in one directory and run "GameBoard.py"
 Type in the number of human and machine players, their names and start the game!
 
 You can use several commands in the game like
+
 roll-     To roll the dice
+
 f-        To finish your turn
+
 ma-       To check the assets you own
+
 a-        To check all players' assets
+
 m-        To mortgage a tile
+
 b-        To build houses/hotels on a tile
+
 r-        To redeem a tile
+
 s-        To sell houses/hotels on a tile
 
 ## Bugs
