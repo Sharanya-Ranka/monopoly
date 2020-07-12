@@ -1,0 +1,27 @@
+For class PlayerInteraction
+
+Variables-
+list of players- To perform the interactions
+
+
+trade(self,trader,tradee)
+	Will handle all actions to complete a trade between trader and tradee
+	Uses tradeProposal object???
+	Asks trader to enter properties to take and money to take
+	Asks trader properties to give and money to give
+	Fills tradeProposal object and asks if tradee accepts tradeProposal
+	If yes,performs exchange, if no, does not.
+
+auction()
+	Performs auction on property. All players are part of the auction in the beginning.
+	Player can either bid or fold. Round starts from player who initiated auction.\
+	Keeps track of highest bid and continues till all but 1 player folds.
+	Awards ownership of the property to the highest bidder.
+	The input for the bid is done through functions in the Human/Machine classes
+	Appropriate output to be shown.
+
+sell_card()
+	Handles selling of jailfree card from trader to tradee. 
+
+show_all_assets()
+	Calls my_assets function for each palyer 

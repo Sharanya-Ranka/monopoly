@@ -1,0 +1,75 @@
+While mortgaging shows mortgaged xxx and then already mortgaged xxx		Done
+Income Tax, Super Tax, money is not reduced					Done
+When showing redeemable properties, first row is not formatted			Done
+Redeem function not working properly						Done
+Build function not working properly(Get Buildable Assets)			Done
+Player pays rent to self							Done
+If no properties to redeem, mortgage,sell or build on, must say no properties and return	Done
+Double rent on undeveloped properties if all of a colour are owned
+In Jail- Card option not working						Done
+Return jailfree in player does not have an argument				Done
+Specify price of property during auction
+Change you and your to player.name
+implement validateint and validateintarray function				
+Use above functions for all validations 
+decide_to_buy function infinite while loop if all mortgaged but price not reached
+(also incorporate sale of houses/hotels)
+During trading, restrict amount that can be asked or given(using self.cash)
+During trading, TradeProposal should look at requested_money and togive_money and normalise it
+Handle bankruptcy
+Machine in jail
+check phone
+3 players
+trading
+
+
+
+
+
+LET'S PLAY MONOPOLY!
+Enter number of players
+1
+Enter number of human players(others will be machine-players)
+1
+Invalid values provided, taking total players as 2 and humans as 1
+Enter name of Machine Player 1
+
+Enter name of Machine Player 2
+
+Rolling for turn-order
+Machine1 rolled 6
+Machine2 rolled 5
+Machine1 rolled 4 and 5
+Machine1 has landed on Pentonville Road
+Auctioning Pentonville Road
+Machine1  bids Rs 12
+Machine2  bids Rs 24
+Machine1  has exited the auction.
+Machine2 has won the auction for Pentonville Road
+
+Machine2 rolled 3 and 6
+Machine2 has landed on Pentonville Road
+
+Machine1 rolled 3 and 2
+Machine1 has landed on Northumberland Avenue
+Machine1 bought Northumberland Avenue for 160
+
+Trade between  <Player.Machine object at 0x00000203576C7390>  and  <Player.Machine object at 0x00000203576C74A8>  successful.
+Machine2 rolled 4 and 1
+Machine2 has landed on Northumberland Avenue
+Traceback (most recent call last):
+  File "E:\testprograms\monopoly\GameBoard.py", line 85, in <module>
+    New_Game.game_setup()
+  File "E:\testprograms\monopoly\GameBoard.py", line 56, in game_setup
+    self.play_game()
+  File "E:\testprograms\monopoly\GameBoard.py", line 72, in play_game
+    player.make_move()
+  File "E:\testprograms\monopoly\Player.py", line 769, in make_move
+    self.roll()
+  File "E:\testprograms\monopoly\Player.py", line 831, in roll
+    self.update_position()
+  File "E:\testprograms\monopoly\Player.py", line 169, in update_position
+    self.landed_on_property(tile_landed_on)                 ##self and which property landed on passed
+  File "E:\testprograms\monopoly\Player.py", line 193, in landed_on_property
+    if property.owner!="Bank" and property.owner.name!=self.name:                  ##Functionality for paying rent
+AttributeError: 'str' object has no attribute 'name'

@@ -1,0 +1,101 @@
+For class player
+
+def get_mortgageable_assets(self):
+	Returns a list of mortgageable assets(If asset is not mortgaged and no houses/hotels on property)
+
+def mortgage_on_these(self,mortgageable_assets,mortgage_on):
+	Given mortgage_on list, mortgage those assets
+
+def get_redeemable_assets(self):
+	Returns a list of redeemable assets(If asset is mortgaged, it is redeemable)
+	(Does NOT check for sufficient cash)
+
+def redeem_on_these(self,redeemable_assets,redeem_on):
+	Given redeem_on, check for enough cash and then redeem
+
+def get_buildable_assets(self):
+	Returns a list of assets on which you can build houses/hotels(Does NOT check for sufficient cash)
+	Ensures houses are built equally on a colour
+
+def build_on_these(self,buildable_assets,build_on):
+	Given build_on, checks for enough cash and builds on the properties
+
+def get_sellable_assets(self):
+	Returns list of assets on which you can sell houses/hotels.
+
+def sell_on_these(self,sellable_assets,sell_on):
+	Given sell_on, sell house/hotel and give cash to player
+
+def update_position(self):
+	Update position of player based on dice value, if passed GO give Rs200
+	4 category distinctions:
+	Property- Residence, Utility or Station
+	Cards- Chance, Community Chest
+	Jail- Go to jail
+	Tax- Pay tax(NEGATIVE CASH VALUE NOT HANDLED)
+
+def landed_on_property(self,property):
+	Handles category 1 of update_position.
+	Calculates and charges rent if applicable(NEGATIVE CASH VALUE NOT HANDLED)
+	Handles property buying, considering all cases(with some functions in Human class)
+	Auctions property if necessary
+
+def landed_on_card(self,card_type):
+	Handles category 2 of update_position.
+	Handles card related functons(Along with functions in Cards class)
+
+def go_to_jail(self):
+	Handles category 3 of update_position.
+	Sends player to jail. Sets injail variable to 3 and changes player position
+	(PROGRAM NEEDS TO CHECK INJAIL VARIABLE AND PERFORM APPROPRIATE ACTIONS)
+
+def total_mortgagable_value(self):
+	Finds cash you get if you sell all mortgagable properties AND SELL HOUSES/HOTELS
+
+
+For class Human
+
+def make_move(self):
+	Main function of Human class
+	First checks if player is in jail, performs operations in jailoptions function
+	Next, checks if player is low on/out of money.Performs necessary operations
+	Next, provides player with options for the turn(roll,build,mortgage,redeem etc)
+
+
+def build(self):
+	Provides a human-computer interface for building houses/hotels on property
+
+def sell(self):
+	Provides a human-computer interface for selling houses/hotels on property
+
+def mortgage(self):
+	Provides a human-computer interface for mortgaging houses/hotels on property
+
+def redeem(self):
+	Provides a human-computer interface for redeeming houses/hotels on property
+
+def show_my_assets(self):
+	Will print assets(Does not show #houses/hotels for Residences)
+	FORMAT-
+	Sr.No\\tab\\Name\\2tabs\\Price\\tab\\
+	for all assets in player's asset_list
+
+def show_assets(self,asset_list):
+	Will print assets(Does not show #houses/hotels for Residences)
+	FORMAT-
+	Sr.No\\tab\\Name\\2tabs\\Price\\tab\\
+	for all assets in asset_list
+	
+
+request_properties_and_money()
+	Shows player assets of the tradee and asks for requested properties and money.
+
+togive_properties_and_money()
+	Shows player assets of him/herself and asks for togive properties and money.
+
+present_trade()
+	Shows player(tradee) the trade proposal and returns whether agreed/disagreed.
+
+get_bid()
+	Takes in input for the auction. Valid inputs are- cash_value greater than highest_bid and "fold" 
+

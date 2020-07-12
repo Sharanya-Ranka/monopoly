@@ -1,0 +1,18 @@
+For TradeProposal class
+
+Variables
+trader,tradee
+properties_asked,properties_togive
+money_asked,money_togive
+accepted_status(Whether the trade proposal was accepted or no)
+
+request_properties_and_money()
+	Uses functions in human/machine class to fill up requested properties/money
+
+togive_properties_and_money()
+	Uses functions in human/machine class to fill up togive properties/money
+
+present_trade()
+	Uses functions in human/machine class to present the trade and get accepted_status
+
+

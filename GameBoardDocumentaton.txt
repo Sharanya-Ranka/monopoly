@@ -1,0 +1,17 @@
+For class GameBoard
+
+
+def fill_tiles():
+	Fills tiles array with appropriate tiles(DATA TO BE ENTERED)
+
+def make_card_deck():
+	Handles card deck creation(CHANCE and COMMUNITY_CHEST)
+	May call functions in Cards class itself(DATA TO BE IN CARDS CLASS)
+
+def game_setup():
+	Initializes game elements- number_of_players, type for each player(Human/Machine)
+	Player_name(Including default names- Machine1,Human1 etc), Calls fill_tiles and
+	make_card_deck. Also performs first dice throw to decide turn queue
+
+def play_game():
+	Controls main gameplay 
